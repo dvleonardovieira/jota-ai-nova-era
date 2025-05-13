@@ -17,7 +17,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-jota-dark min-h-screen text-white overflow-x-hidden">
+    <div className="bg-black min-h-screen text-white overflow-x-hidden">
       <NeuralNetwork />
       <Header />
       <FloatingRobotButton />
