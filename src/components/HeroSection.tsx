@@ -2,13 +2,15 @@
 import React from 'react';
 
 const HeroSection: React.FC = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-jota-neon opacity-10 blur-[100px] animate-pulse-glow"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-jota-neon opacity-5 blur-[120px] animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
-      </div>
-
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="inline-block bg-gradient-to-r from-jota-neon to-jota-light bg-clip-text text-transparent mb-2">
           Agencia de IA • Automação • Inovação
@@ -26,12 +28,12 @@ const HeroSection: React.FC = () => {
           Artificial
         </p>
         
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-jota-neon hover:bg-opacity-90 text-black font-semibold py-3 px-8 rounded-md transition-all duration-300 text-lg">
+        <div className="flex justify-center">
+          <button 
+            onClick={scrollToServices}
+            className="bg-jota-neon hover:bg-opacity-90 text-black font-semibold py-3 px-8 rounded-md transition-all duration-300 text-lg hover:scale-105 transform"
+          >
             Descubra Nossos Agentes
-          </button>
-          <button className="bg-transparent hover:bg-jota-neon/10 text-white border border-jota-neon font-semibold py-3 px-8 rounded-md transition-all duration-300 text-lg border-glow">
-            Solicite uma Demonstração
           </button>
         </div>
       </div>
