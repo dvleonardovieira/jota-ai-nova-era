@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Robot } from 'lucide-react';
+import { Bot } from 'lucide-react';
 
 const FloatingRobotButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,7 @@ const FloatingRobotButton: React.FC = () => {
       } transition-all duration-500`}
     >
       <div className="relative">
-        <Robot size={24} />
+        <Bot size={24} />
         <span className="absolute -top-1 -right-1 w-2 h-2 bg-jota-neon rounded-full animate-pulse"></span>
       </div>
     </button>
