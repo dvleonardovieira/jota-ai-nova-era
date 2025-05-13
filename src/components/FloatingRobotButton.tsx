@@ -1,36 +1,18 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Bot } from 'lucide-react';
 
 const FloatingRobotButton: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services-section');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleClick = () => {
+    console.log('Open AI agent chat');
+    // This will be integrated with n8n in the future
   };
 
   return (
     <button 
-      onClick={scrollToServices}
-      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-black border border-jota-neon text-jota-neon hover:bg-jota-neon/20 transition-all duration-300 shadow-lg ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      } transition-all duration-500`}
+      onClick={handleClick}
+      className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-black border border-jota-neon text-jota-neon hover:bg-jota-neon/20 transition-all duration-300 shadow-lg"
+      aria-label="Fale com um Agente de IA"
     >
       <div className="relative">
         <Bot size={24} />

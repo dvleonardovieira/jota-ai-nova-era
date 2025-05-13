@@ -14,12 +14,15 @@ const ContactSection: React.FC = () => {
   return (
     <section className="py-20 px-6 relative overflow-hidden bg-black" id="contact-section">
       <div className="max-w-7xl mx-auto">
+        <div className="mb-10">
+          <h2 className="text-5xl font-bold">
+            Entre em <span className="text-jota-neon">Contato</span>
+          </h2>
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left column */}
           <div>
-            <h2 className="text-5xl font-bold mb-6">
-              Entre em <span className="text-jota-neon">Contato</span>
-            </h2>
             <p className="text-gray-300 mb-12 max-w-lg">
               Estamos prontos para discutir como podemos transformar sua empresa
               com soluções de IA inteligentes e personalizadas. Deixe sua mensagem e

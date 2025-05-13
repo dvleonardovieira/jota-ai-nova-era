@@ -40,7 +40,7 @@ const NeuralNetwork: React.FC = () => {
       particles = [];
       edges = [];
       
-      const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
+      const particleCount = Math.min(120, Math.floor((canvas.width * canvas.height) / 8000));
       
       // Create particles
       for (let i = 0; i < particleCount; i++) {
@@ -49,13 +49,13 @@ const NeuralNetwork: React.FC = () => {
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
-          radius: Math.random() * 1.5 + 1
+          radius: Math.random() * 2 + 1.5
         });
       }
       
       // Create edges
       for (let i = 0; i < particles.length; i++) {
-        const edgeCount = Math.floor(Math.random() * 2) + 1;
+        const edgeCount = Math.floor(Math.random() * 3) + 2;
         
         for (let j = 0; j < edgeCount; j++) {
           const target = Math.floor(Math.random() * particles.length);
@@ -64,7 +64,7 @@ const NeuralNetwork: React.FC = () => {
             edges.push({
               start: i,
               end: target,
-              alpha: Math.random() * 0.5 + 0.1
+              alpha: Math.random() * 0.6 + 0.2
             });
           }
         }
@@ -83,14 +83,14 @@ const NeuralNetwork: React.FC = () => {
         const dy = endParticle.y - startParticle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 200) {
-          const opacity = edge.alpha * (1 - distance / 200);
+        if (distance < 250) {
+          const opacity = edge.alpha * (1 - distance / 250);
           
           ctx.beginPath();
           ctx.moveTo(startParticle.x, startParticle.y);
           ctx.lineTo(endParticle.x, endParticle.y);
           ctx.strokeStyle = `rgba(30, 174, 219, ${opacity})`;
-          ctx.lineWidth = 0.5;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         }
       });
@@ -168,7 +168,7 @@ const NeuralNetwork: React.FC = () => {
     <canvas 
       ref={canvasRef} 
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ opacity: 0.4 }}
+      style={{ opacity: 0.7 }}
     />
   );
 };

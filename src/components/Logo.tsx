@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
         <span className="text-white">JOTA</span>
         <span className="text-jota-neon">.AI</span>
       </span>
-      <span className="text-xs text-gray-400 mt-1">Inteligência que se adapta ao seu negócio</span>
+      <span className="text-xs text-gray-200 italic mt-0.5">Inteligência que se adapta ao seu negócio</span>
     </div>
   );
 };

@@ -12,8 +12,11 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6">
       <div className="max-w-7xl mx-auto text-center relative z-10">
-        <div className="inline-block bg-gradient-to-r from-jota-neon to-jota-light bg-clip-text text-transparent mb-2">
-          Agencia de IA • Automação • Inovação
+        <div className="inline-block relative px-8 py-2 mb-4">
+          <div className="inline-block bg-gradient-to-r from-jota-neon to-jota-light bg-clip-text text-transparent">
+            Agencia de IA • Automação • Inovação
+          </div>
+          <div className="absolute inset-0 border border-jota-neon/40 rounded-full"></div>
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
           Transforme Seu <span className="text-white">Mundo</span><br />
