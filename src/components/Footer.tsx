@@ -1,13 +1,10 @@
-
 import React from 'react';
 import Logo from './Logo';
-
 const Footer: React.FC = () => {
-  return (
-    <footer className="py-16 px-6 border-t border-white/10 bg-black">
+  return <footer className="py-16 px-6 border-t border-white/10 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
+          <div className="">
             <div className="mb-6">
               <Logo />
             </div>
@@ -18,7 +15,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-            <div>
+            <div className="">
               <h3 className="text-white font-semibold text-lg mb-4">Links Rápidos</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-jota-neon transition-colors">Início</a></li>
@@ -35,8 +32,6 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
