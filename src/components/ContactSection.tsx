@@ -1,18 +1,14 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
-
 const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted');
   };
-
-  return (
-    <section className="py-20 px-6 relative overflow-hidden bg-black" id="contact-section">
+  return <section className="py-20 px-6 relative overflow-hidden bg-black" id="contact-section">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10">
           <h2 className="text-5xl font-bold">
@@ -36,7 +32,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Email</h3>
-                  <p className="text-gray-400">contato@jotasystems.ai</p>
+                  <p className="text-gray-400">contato@jotasystems.com</p>
                 </div>
               </div>
               
@@ -46,7 +42,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Telefone</h3>
-                  <p className="text-gray-400">+55 (11) 3456-7890</p>
+                  <p className="text-gray-400">+1 (727) 251-7979</p>
                 </div>
               </div>
               
@@ -56,7 +52,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Endereço</h3>
-                  <p className="text-gray-400">Av. Paulista, 1000 - São Paulo, SP</p>
+                  <p className="text-gray-400">Clearwater, Florida, USA</p>
                 </div>
               </div>
             </div>
@@ -68,46 +64,25 @@ const ContactSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-white mb-2">Nome</label>
-                  <Input 
-                    id="name" 
-                    placeholder="Seu nome" 
-                    className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white"
-                  />
+                  <Input id="name" placeholder="Seu nome" className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-white mb-2">Email</label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="seu@email.com" 
-                    className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white"
-                  />
+                  <Input id="email" type="email" placeholder="seu@email.com" className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white" />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="company" className="block text-white mb-2">Empresa</label>
-                <Input 
-                  id="company" 
-                  placeholder="Nome da sua empresa" 
-                  className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white"
-                />
+                <Input id="company" placeholder="Nome da sua empresa" className="bg-black/60 border-jota-neon/30 focus:border-jota-neon text-white" />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-white mb-2">Mensagem</label>
-                <textarea 
-                  id="message" 
-                  rows={4} 
-                  placeholder="Como podemos ajudar?" 
-                  className="w-full rounded-md bg-black/60 border border-jota-neon/30 focus:border-jota-neon text-white px-3 py-2 focus-visible:outline-none"
-                ></textarea>
+                <textarea id="message" rows={4} placeholder="Como podemos ajudar?" className="w-full rounded-md bg-black/60 border border-jota-neon/30 focus:border-jota-neon text-white px-3 py-2 focus-visible:outline-none"></textarea>
               </div>
 
-              <Button 
-                type="submit" 
-                className="w-full bg-jota-neon hover:bg-jota-neon/90 text-black font-semibold py-3 flex items-center justify-center gap-2"
-              >
+              <Button type="submit" className="w-full bg-jota-neon hover:bg-jota-neon/90 text-black font-semibold py-3 flex items-center justify-center gap-2">
                 <Send size={16} />
                 Enviar Mensagem
               </Button>
@@ -115,8 +90,6 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
